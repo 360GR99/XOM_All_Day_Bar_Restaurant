@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Ιστοσελίδα με QR Code</title>
-    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <title>Μαγαζί 1</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,15 +16,20 @@
             background-color: #f0f0f0;
         }
         .top-text {
-            font-size: 20px;
+            font-size: 24px;
+            font-weight: bold;
             margin-bottom: 20px;
         }
         .bottom-text {
             font-size: 20px;
             margin-top: 20px;
         }
-        #qrcode {
-            margin-top: 20px;
+        .company-name {
+            font-size: 22px;
+            font-weight: bold;
+            color: #007bff;
+            cursor: pointer;
+            text-decoration: underline;
         }
         iframe {
             width: 80%;
@@ -35,6 +39,7 @@
     </style>
 </head>
 <body>
+    <!-- Κείμενο πάνω -->
     <div class="top-text">Μαγαζί 1</div>
     
     <!-- Ενσωμάτωση του Kuula 360º -->
@@ -43,13 +48,13 @@
             allowfullscreen>
     </iframe>
 
-    <!-- Δημιουργία QR Code -->
-    <div id="qrcode"></div>
-    
-    <div class="bottom-text">Ακολούθησέ μας στα social media</div>
+    <!-- Κείμενο κάτω -->
+    <div class="bottom-text">Ακολούθησε μας στα social media</div>
 
+    <!-- Όνομα επιχείρησης με clickable σύνδεσμο -->
     <div class="company-name" onclick="window.location.href='https://www.instagram.com/anastasios.mazanis/';">
         Μαγαζί 1 Instagram
     </div>
+    
 </body>
 </html>
