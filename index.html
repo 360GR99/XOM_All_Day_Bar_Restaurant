@@ -27,20 +27,75 @@
             margin-top: 20px;
             color: white;
             text-transform: uppercase;
+            margin-bottom: 10px;
         }
-        .company-name {
+        .company-instagram {
             font-size: 22px;
-            font-weight: bold;
-            color: #007bff;
             cursor: pointer;
             text-decoration: none;
+            color: #ff7b00;
+            padding: 2px;
+            margin: 2px;
+        }
+        .company-facebook {
+            font-size: 22px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #0033ff;
+            padding: 2px;
+            margin: 2px;
+        }
+        .company-youtube {
+            font-size: 22px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #ff2a00;
+            padding: 2px;
+            margin: 2px;
         }
         iframe {
             width: 80%;
+            max-width: 80%;
             height: 60vh;
             border: none;
         }
+
+        @media (max-width: 768px) {
+            .top-text {
+                font-size: 20px;
+            }
+            .bottom-text {
+                font-size: 18px;
+            }
+            .company-name {
+                font-size: 20px;
+            }
+            .iframe-container {
+                width: 95%;
+                max-width: none;
+                padding-bottom: 75%; /* More square-like on small screens */
+            }
+        }
+
+        /* Even smaller screens (e.g., phones in portrait mode) */
+        @media (max-width: 480px) {
+            .top-text {
+                font-size: 18px;
+            }
+            .bottom-text {
+                font-size: 16px;
+            }
+            .company-name {
+                font-size: 18px;
+            }
+            .iframe-container {
+                width: 100%;
+                padding-bottom: 80%; /* More space for iframe on very small screens */
+            }
+        }
     </style>
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <!-- Κείμενο πάνω -->
@@ -55,8 +110,15 @@
     <!-- Κείμενο κάτω -->
     <div class="bottom-text">Ακολούθησε μας στα social media</div>
 
-    <a href="https://www.instagram.com/anastasios.mazanis/" target="_blank" class="company-name">
-        Instagram
+    <a href="https://www.instagram.com/anastasios.mazanis/" target="_blank" class="company-instagram">
+        <i class="fab fa-instagram"> Coofee.Shop1</i>
+    </a>
+    
+    <a href="https://www.instagram.com/anastasios.mazanis/" target="_blank" class="company-facebook">
+        <i class="fab fa-facebook"> Coofee Shop 1</i>
+    </a>
+    <a href="https://www.instagram.com/anastasios.mazanis/" target="_blank" class="company-youtube">
+        <i class="fab fa-youtube"> Coofee Shop 1</i>
     </a>
     
 </body>
