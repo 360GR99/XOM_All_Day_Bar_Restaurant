@@ -3,80 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Τα Social Media Μου</title>
+    <title>Το Μαγαζί Μας</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background: url('./ASSETS/LADYBUG COOKING WHITE.png') no-repeat center center/cover;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(5px);
-            z-index: 0;
+            margin: 0;
+            padding: 0;
         }
         .container {
-            position: relative;
-            max-width: 400px;
-            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
-            z-index: 1;
         }
-        h1 {
-            color: white;
+        .content {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin-top: 20px;
         }
-        .links {
+        .social-icons {
             display: flex;
             flex-direction: column;
             gap: 15px;
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
         }
-        .link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.3);
+        .social-icons a {
+            text-decoration: none;
+            font-size: 24px;
+        }
+        iframe {
+            border: none;
+        }
+        .menu-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
             color: white;
             text-decoration: none;
-            padding: 10px;
             border-radius: 5px;
-            transition: 0.3s;
-            font-size: 18px;
-        }
-        .link img {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
-        }
-        .link:hover {
-            background: rgba(255, 255, 255, 0.5);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Ακολούθησέ με!</h1>
-        <div class="links">
-            <a class="link" href="https://www.tiktok.com/@ladybug_cooking" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/3046/3046124.png" alt="Facebook"> TikTok
-            </a>
-            <a class="link" href="https://www.instagram.com/ladybug.cooking/" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"> Instagram
-            </a>
-            <a class="link" href="https://www.youtube.com/@LadybugCooking/shorts" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"> YouTube
-            </a>
+    <h1>Το Μαγαζί Μας</h1>
+    <div class="content">
+        <div class="social-icons">
+            <a href="https://www.instagram.com/" target="_blank">📷 Instagram</a>
+            <a href="https://www.facebook.com/" target="_blank">📘 Facebook</a>
         </div>
+        <iframe src="https://kuula.co/share/collection/7bRf6?logo=1&info=1&fs=1&vr=0&sd=1&gyro=0&thumbs=1" width="600" height="400"></iframe>
+        <iframe src="https://www.google.com/maps?q=37.9838,23.7275&output=embed" width="400" height="400"></iframe>
     </div>
+    <a class="menu-button" href="your-menu-link-here" target="_blank">Δείτε το Μενού</a>
 </body>
 </html>
