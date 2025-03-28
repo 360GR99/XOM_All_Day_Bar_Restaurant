@@ -3,123 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Μαγαζί 1</title>
+    <title>Τα Social Media Μου</title>
     <style>
         body {
-            font-family: Helvetica, sans-serif; 
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: url('./ASSETS/LADYBUG COOKING WHITE.png') no-repeat center center/cover;
+            height: 100vh;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background: linear-gradient(to bottom, #6F4F37, #000000);
+            position: relative;
         }
-        .top-text {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            z-index: 0;
+        }
+        .container {
+            position: relative;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            z-index: 1;
+        }
+        h1 {
             color: white;
-            text-transform: uppercase;
         }
-        .bottom-text {
-            font-size: 20px;
-            margin-top: 20px;
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.3);
             color: white;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-        .company-instagram {
-            font-size: 22px;
-            cursor: pointer;
             text-decoration: none;
-            color: #ff7b00;
-            padding: 2px;
-            margin: 2px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: 0.3s;
+            font-size: 18px;
         }
-        .company-facebook {
-            font-size: 22px;
-            cursor: pointer;
-            text-decoration: none;
-            color: #0033ff;
-            padding: 2px;
-            margin: 2px;
+        .link img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
         }
-        .company-youtube {
-            font-size: 22px;
-            cursor: pointer;
-            text-decoration: none;
-            color: #ff2a00;
-            padding: 2px;
-            margin: 2px;
-        }
-        iframe {
-            width: 80%;
-            max-width: 80%;
-            height: 60vh;
-            border: none;
-        }
-
-        @media (max-width: 768px) {
-            .top-text {
-                font-size: 20px;
-            }
-            .bottom-text {
-                font-size: 18px;
-            }
-            .company-name {
-                font-size: 20px;
-            }
-            .iframe-container {
-                width: 95%;
-                max-width: none;
-                padding-bottom: 75%; /* More square-like on small screens */
-            }
-        }
-
-        /* Even smaller screens (e.g., phones in portrait mode) */
-        @media (max-width: 480px) {
-            .top-text {
-                font-size: 18px;
-            }
-            .bottom-text {
-                font-size: 16px;
-            }
-            .company-name {
-                font-size: 18px;
-            }
-            .iframe-container {
-                width: 100%;
-                padding-bottom: 80%; /* More space for iframe on very small screens */
-            }
+        .link:hover {
+            background: rgba(255, 255, 255, 0.5);
         }
     </style>
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <!-- Κείμενο πάνω -->
-    <div class="top-text">Coffee Shop 1</div>
-    
-    <!-- Ενσωμάτωση του Kuula 360º -->
-    <iframe src="https://kuula.co/share/collection/7bVXh?logo=1&info=1&fs=1&vr=0&sd=1&gyro=0&thumbs=1" 
-            title="Coffee Shop 1"
-            allowfullscreen>
-    </iframe>
-
-    <!-- Κείμενο κάτω -->
-    <div class="bottom-text">Ακολούθησε μας στα social media</div>
-
-    <a href="https://www.instagram.com" target="_blank" class="company-instagram">
-        <i class="fab fa-instagram"> Coofee.Shop1</i>
-    </a>
-    
-    <a href="https://www.facebook.com" target="_blank" class="company-facebook">
-        <i class="fab fa-facebook"> Coofee Shop 1</i>
-    </a>
-    <a href="https://www.youtube.com" target="_blank" class="company-youtube">
-        <i class="fab fa-youtube"> Coofee Shop 1</i>
-    </a>
-    
+    <div class="container">
+        <h1>Ακολούθησέ με!</h1>
+        <div class="links">
+            <a class="link" href="https://www.tiktok.com/@ladybug_cooking" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/3046/3046124.png" alt="Facebook"> TikTok
+            </a>
+            <a class="link" href="https://www.instagram.com/ladybug.cooking/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"> Instagram
+            </a>
+            <a class="link" href="https://www.youtube.com/@LadybugCooking/shorts" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"> YouTube
+            </a>
+        </div>
+    </div>
 </body>
 </html>
