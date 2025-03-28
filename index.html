@@ -15,6 +15,7 @@
             padding: 0;
             max-width: 100%;
             overflow-x: hidden;
+            text-align: center;
         }
 
         header {
@@ -31,105 +32,47 @@
         }
 
         .tour-container {
-            margin-bottom: 20px;
             width: 80%;
-            max-width: 80%;
+            max-width: 900px;
+            margin-bottom: 20px;
         }
 
         .info-map-container {
             display: flex;
-            justify-content: space-between;
-            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            max-width: 900px;
         }
 
-        .store-info {
-            width: 45%;
-            margin-top: 50px;
+        .store-info, .map-container {
+            width: 100%;
+            margin-top: 20px;
         }
 
         .social-menu {
             display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-top: 70px;
-        }
-
-        .map-container {
-            justify-content: start;
-        }
-
-        .menulink {
-            text-decoration: none;
-            font-size: 20px;
-            text-transform: uppercase;
-        }
-
-        .button-5 {
-            align-items: center;
-            background-clip: padding-box;
-            background-color: #fa6400;
-            border: 1px solid transparent;
-            border-radius: .25rem;
-            box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-            box-sizing: border-box;
-            color: #fff;
-            cursor: pointer;
-            display: inline-flex;
-            font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-size: 16px;
-            font-weight: 600;
             justify-content: center;
-            line-height: 1.25;
-            margin: 0;
-            min-height: 3rem;
-            padding: calc(.875rem - 1px) calc(1.5rem - 1px);
-            position: relative;
-            text-decoration: none;
-            transition: all 250ms;
-            user-select: none;
-            -webkit-user-select: none;
-            touch-action: manipulation;
-            vertical-align: baseline;
-            width: auto;
-        }
-
-        .button-5:hover,
-        .button-5:focus {
-            background-color: #fb8332;
-            box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-        }
-
-        .button-5:hover {
-            transform: translateY(-1px);
-        }
-
-        .button-5:active {
-            background-color: #c85000;
-            box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
-            transform: translateY(0);
-        }
-
-        .social-menu-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            gap: 15px;
             margin-top: 20px;
         }
 
-        .fa-facebook {
+        .fa-facebook, .fa-instagram {
             font-size: 50px;
-            color: blue;
-            margin: 10px;
         }
 
-        .fa-instagram {
-            font-size: 50px;
-            color: rgb(255, 140, 0);
-            margin: 10px;
+        .button-5 {
+            background-color: #fa6400;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
         }
 
-        .menu-link {
-            margin-top: 10px;
+        .button-5:hover {
+            background-color: #fb8332;
         }
 
         footer {
@@ -138,32 +81,9 @@
             font-size: 0.8em;
         }
 
-        /* Responsive Styles */
         @media (max-width: 768px) {
             .info-map-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .store-info, .map-container {
-                width: 90%;
-                margin: 0;
-                text-align: center;
-            }
-
-            .social-menu {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .button-5 {
                 width: 100%;
-                max-width: 300px;
-            }
-
-            .map-container iframe {
-                width: 100%;
-                height: 250px;
             }
         }
     </style>
